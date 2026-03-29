@@ -32,7 +32,6 @@ export async function fetchMovies(filters: MovieFilters = {}): Promise<MovieList
   }
   if (filters.actor) params.set('actor', filters.actor);
   if (filters.director) params.set('director', filters.director);
-  if (filters.release_year !== undefined) params.set('release_year', String(filters.release_year));
 
   const query = params.toString();
   const url = query ? `${BASE_URL}/movies/?${query}` : `${BASE_URL}/movies/`;

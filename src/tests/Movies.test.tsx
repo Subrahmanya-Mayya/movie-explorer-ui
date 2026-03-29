@@ -116,22 +116,6 @@ describe('Movies page', () => {
       });
     });
 
-    it('sends release year filter in the fetch URL', async () => {
-      render(
-        <MemoryRouter>
-          <Movies />
-        </MemoryRouter>,
-      );
-      await waitFor(() => expect(screen.getByText('Inception')).toBeInTheDocument());
-
-      fireEvent.change(screen.getByPlaceholderText('e.g. 2010'), { target: { value: '2010' } });
-      fireEvent.click(screen.getByRole('button', { name: /^filter$/i }));
-
-      await waitFor(() => {
-        expect(vi.mocked(fetch)).toHaveBeenCalledWith(expect.stringContaining('release_year=2010'));
-      });
-    });
-
     it('sends genre filter in the fetch URL', async () => {
       render(
         <MemoryRouter>

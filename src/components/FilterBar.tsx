@@ -10,7 +10,6 @@ export default function FilterBar({ genres, onFilter }: Props) {
   const [genre, setGenre] = useState('');
   const [actor, setActor] = useState('');
   const [director, setDirector] = useState('');
-  const [releaseYear, setReleaseYear] = useState('');
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -18,7 +17,6 @@ export default function FilterBar({ genres, onFilter }: Props) {
     if (genre) filters.genre = [genre];
     if (actor.trim()) filters.actor = actor.trim();
     if (director.trim()) filters.director = director.trim();
-    if (releaseYear) filters.release_year = Number(releaseYear);
     onFilter(filters);
   }
 
@@ -26,7 +24,6 @@ export default function FilterBar({ genres, onFilter }: Props) {
     setGenre('');
     setActor('');
     setDirector('');
-    setReleaseYear('');
     onFilter({});
   }
 
@@ -66,16 +63,6 @@ export default function FilterBar({ genres, onFilter }: Props) {
             placeholder="Director name"
             value={director}
             onChange={(e) => setDirector(e.target.value)}
-          />
-        </div>
-        <div className="col">
-          <label className="form-label">Year</label>
-          <input
-            type="number"
-            className="form-control"
-            placeholder="e.g. 2010"
-            value={releaseYear}
-            onChange={(e) => setReleaseYear(e.target.value)}
           />
         </div>
         <div className="col-auto d-flex gap-2 align-self-end">

@@ -66,5 +66,4 @@ export type MovieFilters = {
   genre?: string[];
   actor?: string;
   director?: string;
-  release_year?: number;
 };
