@@ -1,5 +1,5 @@
 services:
   frontend:
-    build: ./movie-ui
+    build: ./
     ports:
-      - "3000:80"
+      - "8080:80"
