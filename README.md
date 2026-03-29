@@ -1,50 +1,61 @@
 # Movie Explorer — Frontend
 
-## 1. Setup
+A frontend app for browsing movies, actors, directors, and genres with backend-driven filtering.
+
+## Tech Stack
+
+- **Framework/Library:** React (TypeScript)
+- **UI Library:** Bootstrap
+
+## Run with Docker
+
+**Using Docker Compose**
 
 ```bash
-npm install
+docker compose up --build
 ```
 
-## 2. Development
-
-```bash
-npm run dev
-```
-
-App runs at `http://localhost:5173`. Requires the backend API at `http://127.0.0.1:8000`.
-
-## 3. Lint
-
-```bash
-npm run lint
-```
-
-## 4. Tests
-
-```bash
-npm test
-```
-
-## 5. Build
-
-Runs type-checking, linting, and bundles the app:
-
-```bash
-npm run build
-```
-
-## 6. Docker
+**Using Docker Image**
 
 ```bash
 docker build -t movie-ui .
 docker run -p 8080:80 movie-ui
 ```
 
-Or use Docker Compose:
+App will be at `http://127.0.0.1:8080`. Requires the backend API at `http://127.0.0.1:8000`.
+
+## Local Development
+
+### 1. Setup
 
 ```bash
-docker compose up --build
+npm install
 ```
 
-App will be at `http://localhost:8080`.
+### 2. Lint
+
+```bash
+npm run lint
+```
+
+## 3. Tests
+
+```bash
+npm test
+```
+
+### 4. Development Server
+
+```bash
+npm run dev
+```
+
+App runs at `http://127.0.0.1:5173`. Requires the backend API at `http://127.0.0.1:8000`.
+
+### 5. Build
+
+Runs type-checking, linting, and bundles the app:
+
+```bash
+npm run build
+```
