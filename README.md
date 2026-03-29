@@ -1,12 +1,12 @@
 # Movie Explorer — Frontend
 
-## Setup
+## 1. Setup
 
 ```bash
 npm install
 ```
 
-## Development
+## 2. Development
 
 ```bash
 npm run dev
@@ -14,7 +14,19 @@ npm run dev
 
 App runs at `http://localhost:5173`. Requires the backend API at `http://127.0.0.1:8000`.
 
-## Build
+## 3. Lint
+
+```bash
+npm run lint
+```
+
+## 4. Tests
+
+```bash
+npm test
+```
+
+## 5. Build
 
 Runs type-checking, linting, and bundles the app:
 
@@ -22,22 +34,17 @@ Runs type-checking, linting, and bundles the app:
 npm run build
 ```
 
-## Tests
-
-```bash
-npm test
-```
-
-## Docker
+## 6. Docker
 
 ```bash
 docker build -t movie-ui .
-docker run -p 3000:80 movie-ui
+docker run -p 8080:80 movie-ui
 ```
 
-Or use Docker Compose from the repo root:
+Or use Docker Compose:
 
 ```bash
 docker compose up --build
 ```
-"# movie-explorer-ui" 
+
+App will be at `http://localhost:8080`.
